@@ -10,7 +10,7 @@ import com.badikirwan.dicoding.footballmatchschedule.utils.Utils
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.match_item.*
 
-class MatchAdapter(val items: List<Event>, val listener:(Event) -> Unit)
+class MatchAdapter(private val items: List<Event>, private val listener:(Event) -> Unit)
     : RecyclerView.Adapter<MatchAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(LayoutInflater.from(parent.context).inflate(
